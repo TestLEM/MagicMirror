@@ -1,5 +1,10 @@
 ![MagicMirror²: The open source modular smart mirror platform. ](.github/header.png)
 
+### Prerequisite
+
+1. Install Homebrew `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+2. Install npm `brew install npm`
+
 ### Installation
 
 1. Download and install the latest Node.js version.
