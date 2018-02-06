@@ -8,7 +8,7 @@
 ### Installation
 
 1. Download and install the latest Node.js version.
-2. Clone the repository and check out the master branch: `git clone https://github.com/TestLEM/MagicMirror`
+2. Clone the repository and check out the master branch: `git clone https://github.com/TestLEM/MagicMirror.git`
 3. Enter the repository: `cd MagicMirror`
 4. Install the app: `npm install`
 5. Run the app: `npm start`
