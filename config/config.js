@@ -234,70 +234,70 @@ var config = {
 				location: "Seoul",
 				locationID: "1835848",
 				appid: "270367c3265f92394c0d5e8d810ae9d2",
-				// What units to use. Specified by config.js 
-				// Possible values: config.units = Specified by config.js, default = Kelvin, metric = Celsius, imperial =Fahrenheit 
+				// What units to use. Specified by config.js
+				// Possible values: config.units = Specified by config.js, default = Kelvin, metric = Celsius, imperial =Fahrenheit
 				units: "metric",
-				// Round temperature value to nearest integer. 
-				// Possible values: true (round to integer) or false (display exact value with decimal point) 
+				// Round temperature value to nearest integer.
+				// Possible values: true (round to integer) or false (display exact value with decimal point)
 				roundTemp: false,
-				// Show the degree label for your chosen units (Metric = C, Imperial = F, Kelvins = K). 
-				// Possible values: true or false 
+				// Show the degree label for your chosen units (Metric = C, Imperial = F, Kelvins = K).
+				// Possible values: true or false
 				degreeLabel: false,
-				// How often does the content needs to be fetched? (Milliseconds) 
-				// Possible values: 1000 - 86400000 
+				// How often does the content needs to be fetched? (Milliseconds)
+				// Possible values: 1000 - 86400000
 				updateInterval: 600000, // 10 minuts
-				// Speed of the update animation. (Milliseconds) 
-				// Possible values:0 - 5000 
+				// Speed of the update animation. (Milliseconds)
+				// Possible values:0 - 5000
 				animationSpeed: 1000, // 1 second
-				// Use 12 or 24 hour format. 
-				// Possible values: 12 or 24 
+				// Use 12 or 24 hour format.
+				// Possible values: 12 or 24
 				timeFormat: 24,
-				// Show the period (am/pm) with 12 hour format 
-				// Possible values: true or false 
+				// Show the period (am/pm) with 12 hour format
+				// Possible values: true or false
 				showPeriod: true,
-				// Show the period (AM/PM) with 12 hour format as uppercase 
+				// Show the period (AM/PM) with 12 hour format as uppercase
 				// Possible values: true or false
 				showPeriodUpper: false,
-				// Show the wind direction next to the wind speed. 
-				// Possible values: true or false 
+				// Show the wind direction next to the wind speed.
+				// Possible values: true or false
 				showWindDirection: true,
-				// Show the wind direction as an arrow instead of abbreviation 
-				// Possible values: true or false 
+				// Show the wind direction as an arrow instead of abbreviation
+				// Possible values: true or false
 				showWindDirectionAsArrow: false,
-				// Show the current humidity 
-				// Possible values: true or false 
+				// Show the current humidity
+				// Possible values: true or false
 				showHumidity: false,
-				// If you have another module that emits the INDOOR_TEMPERATURE notification, the indoor temperature will be displayed 
+				// If you have another module that emits the INDOOR_TEMPERATURE notification, the indoor temperature will be displayed
 				showIndoorTemperature: false,
-				// Show only current Temperature and weather icon. 
-				// Possible values: true or false 
+				// Show only current Temperature and weather icon.
+				// Possible values: true or false
 				onlyTemp: false,
-				// Pick between using the Beaufort scale for wind speed or using the default units. 
-				// Possible values: true or false 
+				// Pick between using the Beaufort scale for wind speed or using the default units.
+				// Possible values: true or false
 				useBeaufort: true,
-				// The language of the days. 
-				// Possible values: en, nl, ru, etc ... 
+				// The language of the days.
+				// Possible values: en, nl, ru, etc ...
 				lang: "en",
 				// The decimal symbol to use.
 				// Possible values: '.', ',' or any other symbol.
 				decimalSymbol: '.',
-				// The initial delay before loading. If you have multiple modules that use the same API key, you might want to delay one of the requests. (Milliseconds) 
-				// Possible values: 1000 - 5000 
+				// The initial delay before loading. If you have multiple modules that use the same API key, you might want to delay one of the requests. (Milliseconds)
+				// Possible values: 1000 - 5000
 				initialLoadDelay: 0,
-				// The delay before retrying after a request failure. (Milliseconds) 
-				// Possible values: 1000 - 60000 
+				// The delay before retrying after a request failure. (Milliseconds)
+				// Possible values: 1000 - 60000
 				retryDelay: 2500,
-				// The OpenWeatherMap API version to use. 
+				// The OpenWeatherMap API version to use.
 				apiVersion: 2.5,
-				// The OpenWeatherMap base URL. 
+				// The OpenWeatherMap base URL.
 				apiBase: 'http://api.openweathermap.org/data/',
-				// The OpenWeatherMap API endPoint. 
+				// The OpenWeatherMap API endPoint.
 				weatherEndpoint: 'weather',
-				// If set to true, the returned location name will be appended to the header of the module, if the header is enabled. This is mainly intresting when using calender based weather. 
+				// If set to true, the returned location name will be appended to the header of the module, if the header is enabled. This is mainly intresting when using calender based weather.
 				appendLocationNameToHeader: true,
-				// The class for the calender module to base the event based weather information on. 
+				// The class for the calender module to base the event based weather information on.
 				calendarClass: 'calendar',
-				// The conversion table to convert the weather conditions to weather-icons. 
+				// The conversion table to convert the weather conditions to weather-icons.
 				// https://openweathermap.org/weather-conditions
 				iconTable: {
 					'01d': 'wi-day-sunny',
@@ -329,53 +329,53 @@ var config = {
 				location: "Seoul",
 				locationID: "1835848",
 				appid: "270367c3265f92394c0d5e8d810ae9d2",
-				// What units to use. Specified by config.js 
-				// Possible values: config.units = Specified by config.js, default = Kelvin, metric = Celsius, imperial =Fahrenheit 
+				// What units to use. Specified by config.js
+				// Possible values: config.units = Specified by config.js, default = Kelvin, metric = Celsius, imperial =Fahrenheit
 				units: "metric",
-				// Round temperature values to nearest integer. 
-				// Possible values: true (round to integer) or false (display exact value with decimal point) 
+				// Round temperature values to nearest integer.
+				// Possible values: true (round to integer) or false (display exact value with decimal point)
 				roundTemp: false,
-				// How many days of forecast to return. Specified by config.js 
-				// Possible values: 1 - 16 
+				// How many days of forecast to return. Specified by config.js
+				// Possible values: 1 - 16
 				maxNumberOfDays: 7,
-				// Should the predicted rain amount be displayed? 
-				// Possible values: true or false 
+				// Should the predicted rain amount be displayed?
+				// Possible values: true or false
 				showRainAmount: false,
-				// How often does the content needs to be fetched? (Milliseconds) 
-				// Possible values: 1000 - 86400000 
+				// How often does the content needs to be fetched? (Milliseconds)
+				// Possible values: 1000 - 86400000
 				updateInterval: 600000, // 10 minutes
-				// Speed of the update animation. (Milliseconds) 
-				// Possible values:0 - 5000 
+				// Speed of the update animation. (Milliseconds)
+				// Possible values:0 - 5000
 				animationSpeed: 1000, // 1 second
-				// The language of the days. 
-				// Possible values: en, nl, ru, etc ... 
+				// The language of the days.
+				// Possible values: en, nl, ru, etc ...
 				lang: "en",
 				// The decimal symbol to use.
 				// Possible values: ".", "," or any other symbol.
 				decimalSymbol: ".",
-				// Fade the future events to black. (Gradient) 
-				// Possible values: true or false 
+				// Fade the future events to black. (Gradient)
+				// Possible values: true or false
 				fade: true,
-				// Where to start fade? 
-				// Possible values: 0 (top of the list) - 1 (bottom of list) 
+				// Where to start fade?
+				// Possible values: 0 (top of the list) - 1 (bottom of list)
 				fadePoint: 0.25,
-				// The initial delay before loading. If you have multiple modules that use the same API key, you might want to delay one of the requests. (Milliseconds) 
-				// Possible values: 1000 - 5000 
+				// The initial delay before loading. If you have multiple modules that use the same API key, you might want to delay one of the requests. (Milliseconds)
+				// Possible values: 1000 - 5000
 				initialLoadDelay: 2500, // 2.5 seconds delay. This delay is used to keep the OpenWeather API happy.
-				// The delay before retrying after a request failure. (Milliseconds) 
-				// Possible values: 1000 - 60000 
+				// The delay before retrying after a request failure. (Milliseconds)
+				// Possible values: 1000 - 60000
 				retryDelay: 2500,
-				// The OpenWeatherMap API version to use. 
+				// The OpenWeatherMap API version to use.
 				apiVersion: 2.5,
-				// The OpenWeatherMap base URL. 
+				// The OpenWeatherMap base URL.
 				apiBase: "http://api.openweathermap.org/data/",
-				// The OpenWeatherMap API endPoint. 
+				// The OpenWeatherMap API endPoint.
 				forecastEndpoint: "forecast/daily",
-				// If set to true, the returned location name will be appended to the header of the module, if the header is enabled. This is mainly intresting when using calender based weather. 
+				// If set to true, the returned location name will be appended to the header of the module, if the header is enabled. This is mainly intresting when using calender based weather.
 				appendLocationNameToHeader: true,
-				// The class for the calender module to base the event based weather information on. 
+				// The class for the calender module to base the event based weather information on.
 				calendarClass: "calendar",
-				// The conversion table to convert the weather conditions to weather-icons. 
+				// The conversion table to convert the weather conditions to weather-icons.
 				// https://openweathermap.org/weather-conditions
 				iconTable: {
 				    '01d': 'wi-day-sunny',
@@ -397,7 +397,7 @@ var config = {
 				    '13n': 'wi-night-snow',
 				    '50n': 'wi-night-alt-cloudy-windy'
 				},
-				// If set "colored" to true the min-temp get a blue tone and the max-temp get a red tone. 
+				// If set "colored" to true the min-temp get a blue tone and the max-temp get a red tone.
 				colored: "false",
 			}
 		},
@@ -411,58 +411,58 @@ var config = {
 						url: "http://fs.jtbc.joins.com//RSS/newsflash.xml"
 					}
 				],
-				// Display the title of the source. 
+				// Display the title of the source.
 				showSourceTitle: true,
-				// Display the publish date of an headline. 
+				// Display the publish date of an headline.
 				showPublishDate: true,
-				// Display the description of an item. 
+				// Display the description of an item.
 				showDescription: true,
 				// Wrap the title of the item to multiple lines.
 				wrapTitle: true,
-				// Wrap the description of the item to multiple lines. 
+				// Wrap the description of the item to multiple lines.
 				wrapDescription: true,
-				// Truncate description? 
+				// Truncate description?
 				truncDescription: true,
-				// How many characters to be displayed for a truncated description? 
-				// Possible values: 1 - 500 
+				// How many characters to be displayed for a truncated description?
+				// Possible values: 1 - 500
 				lengthDescription: 500,
-				// Hide module instead of showing LOADING status. 
+				// Hide module instead of showing LOADING status.
 				hideLoading: false,
-				// How often does the content needs to be fetched? (Milliseconds) 
-				// Possible values: 1000 - 86400000 
+				// How often does the content needs to be fetched? (Milliseconds)
+				// Possible values: 1000 - 86400000
 				reloadInterval: 300000, // 5 minutes
-				// How often do you want to display a new headline? (Milliseconds) 
-				// Possible values:1000 - 60000 
+				// How often do you want to display a new headline? (Milliseconds)
+				// Possible values:1000 - 60000
 				updateInterval: 10000, // 10 seconds
-				// Speed of the update animation. (Milliseconds) 
-				// Possible values:0 - 5000 
+				// Speed of the update animation. (Milliseconds)
+				// Possible values:0 - 5000
 				animationSpeed: 2500, // 2.5 seconds
-				// Total amount of news items to cycle through. (0 for unlimited) 
-				// Possible values:0 - ... 
+				// Total amount of news items to cycle through. (0 for unlimited)
+				// Possible values:0 - ...
 				maxNewsItems: 0,
-				// Ignore news items that are outdated. 
+				// Ignore news items that are outdated.
 				ignoreOldItems: false,
-				// How old should news items be before they are considered outdated? (Milliseconds) 
-				// Possible values:1 - ... 
+				// How old should news items be before they are considered outdated? (Milliseconds)
+				// Possible values:1 - ...
 				ignoreOlderThan: 86400000, // 1 day
 				//
-				// Some newsfeeds feature tags at the beginning of their titles or descriptions, such as [VIDEO]. This setting allows for the removal of specified tags from the beginning of an item's description and/or title. 
+				// Some newsfeeds feature tags at the beginning of their titles or descriptions, such as [VIDEO]. This setting allows for the removal of specified tags from the beginning of an item's description and/or title.
 				// Possible values:'title', 'description', 'both'
 				// removeStartTags: value,
 				//
-				// List the tags you would like to have removed at the beginning of the feed item 
+				// List the tags you would like to have removed at the beginning of the feed item
 				// Possible values: ['TAG'] or ['TAG1','TAG2',...]
 				// startTags: value,
 				//
-				// Remove specified tags from the end of an item's description and/or title. 
+				// Remove specified tags from the end of an item's description and/or title.
 				// Possible values:'title', 'description', 'both'
 				// removeEndTags: value,
 				//
-				// List the tags you would like to have removed at the end of the feed item 
+				// List the tags you would like to have removed at the end of the feed item
 				// Possible values: ['TAG'] or ['TAG1','TAG2',...]
 				// endTags: value,
 				//
-				// Remove news feed item if one of these words is found anywhere in the title (case insensitive and greedy matching) 
+				// Remove news feed item if one of these words is found anywhere in the title (case insensitive and greedy matching)
 				// Possible values: ['word'] or ['word1','word2',...]
 				// prohibitedWords: value,
 			}
@@ -655,6 +655,7 @@ var config = {
 		{
 			// npm install 필요
 			module: 'MMM-MyCommute',
+			disabled: true,
 			position: 'top_left',
 			header: 'Traffic',
 			classes: 'default everyone',
