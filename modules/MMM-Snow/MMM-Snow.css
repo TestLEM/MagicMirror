@@ -1,0 +1,36 @@
+.MMM-Snow .snow-flake {
+    position: absolute;
+    top: -20px;
+    animation-name: snow-drop;
+    animation-iteration-count: infinite;
+}
+
+.MMM-Snow .snow-flake div {
+    width: 20px;
+    height: 20px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    animation-name: snow-jiggle;
+    animation-iteration-count: infinite;
+}
+
+.MMM-Snow .flake1 {background-image: url('images/flake1.png');}
+.MMM-Snow .flake2 {background-image: url('images/flake2.png');}
+.MMM-Snow .flake3 {background-image: url('images/flake3.png');}
+
+@keyframes snow-drop {
+    from {transform: translateY(0vh)}
+    to {transform: translateY(calc(100vh + 20px))}
+}
+
+@keyframes snow-jiggle {
+    0% {transform: translateX(0vw)}
+    20% {transform: translateX(20vw)}
+    30% {transform: translateX(5vw)}
+    50% {transform: translateX(25vw)}
+    70% {transform: translateX(0vw)}
+    85% {transform: translateX(15vw)}
+    100% {transform: translateX(0vw)}
+}

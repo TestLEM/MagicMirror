@@ -60,11 +60,12 @@ Temporary Items
 !/modules/node_helper
 !/modules/node_helper/**
 
-# Ignore all modules except the default modules.
-/modules/**
+# Include all modules.
+!/modules/**
 !/modules/default
 !/modules/default/**
 !/modules/README.md**
+/modules/.DS_Store
 
 # Ignore changes to the custom css files.
 /css/custom.css
