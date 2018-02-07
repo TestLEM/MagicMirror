@@ -13,6 +13,12 @@
 4. Install the app: `npm install`
 5. Run the app: `npm start`
 
+### Update to latest version
+
+1. Open `Terminal` app
+2. Enter the repository: `cd MagicMirror`
+3. Pull it!: `git pull`
+
 ### Configuration
 
 1. Open config/config.js file with text editor.
