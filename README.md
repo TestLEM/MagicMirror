@@ -18,6 +18,7 @@
 1. Open `Terminal` app
 2. Enter the repository: `cd MagicMirror`
 3. Pull it!: `git pull`
+4. Install node packages: `npm install`
 
 ### Configuration
 
