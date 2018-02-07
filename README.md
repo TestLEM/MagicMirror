@@ -17,8 +17,9 @@
 
 1. Open `Terminal` app
 2. Enter the repository: `cd MagicMirror`
-3. Pull it!: `git pull`
-4. Install node packages: `npm install`
+3. Restore to original state: `git checkout package-lock.json`
+4. Pull it!: `git pull`
+5. Install node packages: `npm install`
 
 ### Configuration
 
