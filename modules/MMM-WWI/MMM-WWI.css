@@ -1,0 +1,100 @@
+/* Copy and paste any or all of these css entries into your custom.css file inside your
+ * css folder. The functions are annotated to make things as easy as possible for you.
+ * Use any colors you want! Go to - "http://htmlcolorcodes.com/color-picker/"
+ * Pick your color, copy and paste the HEX number. Example - #62FF00 = bright green.
+ */
+
+.MMM-WWI .header {
+  color: white;               /* Header color. Default is white. */
+  text-align: left;           /* Algin header text  */
+}
+
+.MMM-WWI .photo { 
+  display: none;              // comment if you want the picture */        
+  width: 95%;                /* adjust size of picture */
+  margin-left: 0px;          /* Precisely align picture with these */
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  float: left;
+}
+
+.MMM-WWI .icon { 
+/*  display: none;              uncomment if you don't want the icon at all */           
+  width: 10%;                /* adjust size of icon */
+  margin-left: 0px;          /* Precisely align icon with these */
+  margin-right: 135px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  float: right;
+}
+
+.MMM-WWI .summary {
+  color: #62FF00;               /* summary color. Default is white. */
+  text-align: left;           /* Align summary text  */
+}
+
+.MMM-WWI .chill {
+  color: white;               /* chill color. Default is white. */
+  text-align: left;           /* Align chill text  */
+}
+
+.MMM-WWI .ozone {
+  color: white;               /* ozone color. Default is white. */
+  text-align: left;            /* Align ozone text  */
+}
+
+.MMM-WWI .StormDistance {
+  color: white;               /* StormDistance color. Default is white. */
+  text-align: left;            /* Align StormDistance text  */
+}
+
+.MMM-WWI .StormBearing {
+  color: white;               /* StormBearing color. Default is white. */
+  text-align: left;            /* Align StormBearing text  */
+}
+
+.MMM-WWI .windSpeed {
+  color: white;               /* windSpeed color. Default is white. */
+  text-align: left;            /* Align windSpeed text  */
+}
+
+.MMM-WWI .windGust {
+  color: white;               /* windGust color. Default is white. */
+  text-align: left;            /* Align windGust text  */
+}
+
+.MMM-WWI .windBearing {
+  color: white;               /* windBearing color. Default is white. */
+  text-align: left;            /* Align windBearing text  */
+}
+
+.MMM-WWI .visibility {
+  color: white;               /* visibility color. Default is white. */
+  text-align: left;            /* Align visibility text  */
+}
+
+.MMM-WWI .cloudCover {
+  color: white;               /* cloudCover color. Default is white. */
+  text-align: left;            /* Align cloudCover text  */
+}
+
+.MMM-WWI .pressure {
+  color: white;               /* pressure color. Default is white. */
+  text-align: left;            /* Align pressure text  */
+}
+
+.MMM-WWI .humidity {
+  color: white;               /* humidity color. Default is white. */
+  text-align: left;            /* Align humidity text  */
+}
+
+.MMM-WWI .dewPoint {
+  color: white;               /* dewPoint color. Default is white. */
+  text-align: left;            /* Align dewPoint text  */
+}
+
+.MMM-WWI .uvIndex {
+  color: white;               /* uvIndex color. Default is white. */
+  text-align: left;            /* Align uvIndex text  */
+}

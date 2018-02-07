@@ -69,6 +69,7 @@
     "valid-url": "latest",
     "walk": "latest",
     "moment-duration-format": "^1.3.0",
-    "xml2js": "^0.4.17"
+    "xml2js": "^0.4.17",
+    "underscore": "latest"
   }
 }
