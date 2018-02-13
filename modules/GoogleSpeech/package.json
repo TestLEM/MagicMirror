@@ -1,0 +1,13 @@
+{
+  "name": "googlespeech",
+  "version": "1.0.0",
+  "description": "Using google speech api.",
+  "private": true,
+  "main": "GoogleSpeech.js",
+  "author": "L.ego",
+  "license": "MIT",
+  "dependencies": {
+    "@google-cloud/speech": "1.1.0",
+    "node-record-lpcm16": "0.3.0"
+  }
+}
