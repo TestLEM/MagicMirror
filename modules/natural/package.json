@@ -1,0 +1,25 @@
+{
+  "name": "natural",
+  "version": "1.0.0",
+  "description": "Using natural libarary.",
+  "main": "natural.js",
+  "author": "L.ego",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/NaturalNode/natural.git"
+  },
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-eslint": "latest",
+    "grunt-jsonlint": "latest",
+    "grunt-markdownlint": "^1.0.13",
+    "grunt-stylelint": "latest",
+    "grunt-yamllint": "latest",
+    "stylelint-config-standard": "latest",
+    "time-grunt": "latest"
+  },
+  "dependencies": {
+    "natural": "^0.5.6"
+  }
+}
