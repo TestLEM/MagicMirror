@@ -11,7 +11,7 @@ To use this module, add the following configuration block to the modules array i
 var config = {
     modules: [
         {
-            module: 'GoogleSpeech',
+            module: 'googlespeech',
 			position: 'top_right',
             config: {
                 ...

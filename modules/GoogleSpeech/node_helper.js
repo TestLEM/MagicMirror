@@ -1,5 +1,5 @@
 /* Magic Mirror
- * Node Helper: GoogleSpeech
+ * Node Helper: googlespeech
  *
  * By L.ego
  * MIT Licensed.
@@ -20,17 +20,17 @@ module.exports = NodeHelper.create({
 
 	socketNotificationReceived: function(notification, payload) {
 		switch(notification) {
-			case 'CONNECT':
+			case 'CONNECTED':
 				console.log('Google Speech Module connected');
 				return;
-			case 'CHANGE_SPEECH':
+			case 'REQUEST_CHANGING_SPEECH_TO_TEXT':
 				this.syncRecognize(
 					payload.filename, 
 					payload.encoding, 
 					payload.sampleRateHertz, 
 					payload.languageCode);
 					return;
-			case 'LISTEN_SPEECH':
+			case 'REQUEST_LISTENING_SPEECH':
 				this.streamingMicRecognize(
 					payload.encoding, 
 					payload.sampleRateHertz, 
@@ -83,7 +83,7 @@ module.exports = NodeHelper.create({
 				const transcription = response.results
 					.map(result => result.alternatives[0].transcript)
 					.join('\n');
-				self.sendSocketNotification('SHOW_TEXT', transcription);
+				self.sendSocketNotification('FINISH_CHANGING_SPEECH_TO_TEXT', transcription);
 				console.log('Transcription: ', transcription);
 		  })
 		  .catch(err => {
@@ -130,7 +130,7 @@ module.exports = NodeHelper.create({
 				const transcription = data.results[0] && data.results[0].alternatives[0]
 				? data.results[0].alternatives[0].transcript
 				: `Reached transcription time limit, press Ctrl+C\n`
-				self.sendSocketNotification('SHOW_TEXT', transcription);
+				self.sendSocketNotification('FINISH_LISTENING_SPEECH', transcription);
 				console.log('Transcription: ', transcription); 
 		  	}
 		  );

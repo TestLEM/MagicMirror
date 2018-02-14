@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Using google speech api.",
   "private": true,
-  "main": "GoogleSpeech.js",
+  "main": "googlespeech.js",
   "author": "L.ego",
   "license": "MIT",
   "dependencies": {
