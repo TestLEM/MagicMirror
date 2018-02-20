@@ -1,0 +1,11 @@
+{
+  "name": "vad",
+  "version": "1.0.0",
+  "description": "vad module",
+  "main": "vad.js",
+  "author": "L.ego",
+  "license": "MIT",
+  "dependencies": {
+    "mic": "latest"
+  }
+}
