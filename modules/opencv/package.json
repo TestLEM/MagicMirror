@@ -1,0 +1,15 @@
+{
+  "name": "opencv",
+  "author": "L.EGO",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Module for opencv",
+  "keywords": ["opencv"],
+  "dependencies": {
+    "opencv4nodejs": "^4.3.0",
+    "electron-rebuild": "^1.7.3"
+  },
+  "scripts": {
+    "postinstall": "node_modules/.bin/electron-rebuild -e ../../node_modules/electron"
+  }
+}

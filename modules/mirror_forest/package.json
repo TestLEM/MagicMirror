@@ -1,0 +1,18 @@
+{
+  "name": "mirror_forest",
+  "version": "1.0.0",
+  "description": "Module for mirror forest.",
+  "main": "mirror_forest.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "slack",
+    "forest"
+  ],
+  "author": "L.EGO",
+  "license": "MIT",
+  "dependencies": {
+    "@slack/client": "^4.2.0"
+  }
+}

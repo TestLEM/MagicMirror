@@ -5,7 +5,7 @@
  * MIT Licensed.
  */
 
-var NodeHelper = require("node_helper");
+var NodeHelper = require("../../../js/node_helper");
 var validUrl = require("valid-url");
 var Fetcher = require("./fetcher.js");
 

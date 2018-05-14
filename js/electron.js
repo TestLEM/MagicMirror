@@ -24,7 +24,7 @@ function createWindow() {
 		y: 0,
 		darkTheme: true,
 		webPreferences: {
-			nodeIntegration: false,
+			nodeIntegration: true,
 			zoomFactor: config.zoom
 		},
 		backgroundColor: "#000000"

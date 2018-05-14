@@ -1,5 +1,11 @@
 ![MagicMirror²: The open source modular smart mirror platform. ](.github/header.png)
 
+### Coding convention
+
+1. We use Airbnb Javascript Style Guide `https://github.com/airbnb/javascript`
+2. Install eslint `npm install -g eslint eslint-config-airbnb-base eslint-plugin-import`
+3. Use it `eslint [file path]`
+
 ### Prerequisite
 
 1. Install Homebrew `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
@@ -11,7 +17,9 @@
 2. Clone the repository and check out the master branch: `git clone https://github.com/TestLEM/MagicMirror.git`
 3. Enter the repository: `cd MagicMirror`
 4. Install the app: `npm install`
-5. Run the app: `npm start`
+5. Run the app:
+  * desktop mode: `npm start`
+  * web mode: `node serveronly`
 
 ### Update to latest version
 

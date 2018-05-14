@@ -1,0 +1,13 @@
+{
+  "name": "face_detection",
+  "version": "1.0.0",
+  "description": "face detection module for Magic Mirror",
+  "keywords": [
+    "Magic Mirror",
+    "Face detection"
+  ],
+  "author": "L.EGO",
+  "dependencies": {
+    "python-shell": "^0.4.0"
+  }
+}

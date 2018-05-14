@@ -17,7 +17,7 @@ Module.register("weatherforecast",{
 		units: config.units,
 		maxNumberOfDays: 7,
 		showRainAmount: false,
-		updateInterval: 10 * 60 * 1000, // every 10 minutes
+		updateInterval: 60 * 60 * 1000, // every 1 hour
 		animationSpeed: 1000,
 		timeFormat: config.timeFormat,
 		lang: config.language,
@@ -32,7 +32,7 @@ Module.register("weatherforecast",{
 
 		apiVersion: "2.5",
 		apiBase: "https://api.openweathermap.org/data/",
-		forecastEndpoint: "forecast/daily",
+		forecastEndpoint: "forecast",
 
 		appendLocationNameToHeader: true,
 		calendarClass: "calendar",
@@ -211,26 +211,42 @@ Module.register("weatherforecast",{
 	},
 
 	// Override notification handler.
-	notificationReceived: function(notification, payload, sender) {
-		if (notification === "DOM_OBJECTS_CREATED") {
-			if (this.config.appendLocationNameToHeader) {
-				this.hide(0, {lockString: this.identifier});
-			}
-		}
-		if (notification === "CALENDAR_EVENTS") {
-			var senderClasses = sender.data.classes.toLowerCase().split(" ");
-			if (senderClasses.indexOf(this.config.calendarClass.toLowerCase()) !== -1) {
-				this.firstEvent = false;
+	notificationReceived(notification, payload, sender) {
+		switch(notification) {
+			case "DOM_OBJECTS_CREATED":
+				if (this.config.appendLocationNameToHeader) {
+					this.hide(0, {lockString: this.identifier});
+				}
+				break;
+			case "CALENDAR_EVENTS":
+				var senderClasses = sender.data.classes.toLowerCase().split(" ");
+				if (senderClasses.indexOf(this.config.calendarClass.toLowerCase()) !== -1) {
+					this.firstEvent = false;
 
-				for (var e in payload) {
-					var event = payload[e];
-					if (event.location || event.geo) {
-						this.firstEvent = event;
-						//Log.log("First upcoming event with location: ", event);
-						break;
+					for (var e in payload) {
+						var event = payload[e];
+						if (event.location || event.geo) {
+							this.firstEvent = event;
+							//Log.log("First upcoming event with location: ", event);
+							break;
+						}
 					}
 				}
+				break;
+			case 'REQUEST_SEND_DATA_TO_SERVER': {
+				const {temperature, weather} = this.forecast[0];
+
+				this.sendNotification('REQUEST_SEND_TOPIC_DATA_TO_GATEWAY', {
+					topic: 'weather',
+					data: {
+						outdoorTemperature: temperature,
+						type: weather,
+					},
+				});
+				break;
 			}
+			default:
+			// Do nothing.
 		}
 	},
 
@@ -334,7 +350,6 @@ Module.register("weatherforecast",{
 		this.forecast = [];
 		var lastDay = null;
 		var forecastData = {}
-
 		for (var i = 0, count = data.list.length; i < count; i++) {
 
 			var forecast = data.list[i];
@@ -349,7 +364,9 @@ Module.register("weatherforecast",{
 					icon: this.config.iconTable[forecast.weather[0].icon],
 					maxTemp: this.roundValue(forecast.temp.max),
 					minTemp: this.roundValue(forecast.temp.min),
-					rain: this.roundValue(forecast.rain)
+					rain: this.roundValue(forecast.rain),
+					temperature: this.roundValue(forecast.main.temp),
+					weather: forecast.weather[0].main,
 				};
 
 				this.forecast.push(forecastData);
@@ -362,16 +379,18 @@ Module.register("weatherforecast",{
 
 				// Since we don't want an icon from the start of the day (in the middle of the night)
 				// we update the icon as long as it's somewhere during the day.
+
+				// 만약 같은날 데이터에 weather가 Clear가 아니라면 해당 값으로 setting
+				if (forecast.weather[0].main !== 'Clear') {
+					forecastData.weather = forecast.weather[0].main;
+				}
+
 				if (hour >= 8 && hour <= 17) {
 					forecastData.icon = this.config.iconTable[forecast.weather[0].icon];
 				}
 			}
 		}
-
-		//Log.log(this.forecast);
-		this.show(this.config.animationSpeed, {lockString:this.identifier});
 		this.loaded = true;
-		this.updateDom(this.config.animationSpeed);
 	},
 
 	/* scheduleUpdate()

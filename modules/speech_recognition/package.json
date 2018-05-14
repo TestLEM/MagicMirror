@@ -1,0 +1,12 @@
+{
+  "name": "speech_recognition",
+  "version": "1.0.0",
+  "description": "Magic Mirror module using google speech reconigtion api.",
+  "private": true,
+  "main": "speech_recognition.js",
+  "author": "L.EGO",
+  "dependencies": {
+    "@google-cloud/speech": "1.2.0",
+    "node-record-lpcm16": "0.3.0"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "push_receiver",
+  "version": "1.0.0",
+  "description": "Receive push message from firebase.",
+  "main": "push_receiver.js",
+  "author": "L.EGO",
+  "dependencies": {
+    "electron-push-receiver": "^1.2.4"
+  }
+}

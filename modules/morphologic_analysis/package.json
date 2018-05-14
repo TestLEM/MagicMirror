@@ -1,0 +1,11 @@
+{
+  "name": "morphologic_analysis",
+  "version": "1.0.0",
+  "description": "morphologic_analysis module",
+  "main": "morphologic_analysis.js",
+  "author": "L.ego",
+  "license": "MIT",
+  "dependencies": {
+    "mecab-ya": "^0.1.1"
+  }
+}
