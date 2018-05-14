@@ -66,3 +66,5 @@ Module configuration:
 | `header` | To display a header text above the module, add the header property. This field is optional. |
 | `disabled` | Set disabled to `true` to skip creating the module. This field is optional. |
 | `config` | An object with the module configuration properties. Check the documentation of the module for more information. This field is optional, unless the module requires extra configuration. |
+
+TEST
