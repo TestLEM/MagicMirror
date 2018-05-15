@@ -44,10 +44,9 @@ module.exports = NodeHelper.create({
   },
 
   sendRequest(url, payload) {
-    console.log('sendRequest');
     return axios.post(url, payload)
       .then((response) => {
-        console.info(response);
+        console.info(response.data);
         return response;
       })
       .catch((error) => {
@@ -70,11 +69,11 @@ module.exports = NodeHelper.create({
   },
 
   async getAction(actionId) {
-    const response = await this.sendRequest(`${this.gatewayUrl}/actions`, { id: actionId });
-    if (response == null) {
+    const { data } = await this.sendRequest(`${this.gatewayUrl}/actions`, { id: actionId });
+    if (data == null) {
       console.error(`Not found: ${actionId}`);
       return;
     }
-    this.sendSocketNotification('REQUEST_PROCESS_ACTION', response.data);
+    this.sendSocketNotification('REQUEST_PROCESS_ACTION', data);
   },
 });

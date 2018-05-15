@@ -16,7 +16,7 @@
 1. Download and install the latest Node.js version.
 2. Clone the repository and check out the master branch: `git clone https://github.com/TestLEM/MagicMirror.git`
 3. Enter the repository: `cd MagicMirror`
-4. Install the app: `npm install`
+4. Install the app: `npm i --runtime=electron --target=2.0.0`
 5. Run the app:
   * desktop mode: `npm start`
   * web mode: `node serveronly`
@@ -66,5 +66,3 @@ Module configuration:
 | `header` | To display a header text above the module, add the header property. This field is optional. |
 | `disabled` | Set disabled to `true` to skip creating the module. This field is optional. |
 | `config` | An object with the module configuration properties. Check the documentation of the module for more information. This field is optional, unless the module requires extra configuration. |
-
-TEST

@@ -39,7 +39,7 @@ module.exports = NodeHelper.create({
               return;
             }
             const pm25 = data.iaqi.pm25.v;
-            this.sendNotification('DUST_DATA_RECEIVED', pm25);
+            this.sendSocketNotification('DUST_DATA_RECEIVED', pm25);
           });
         break;
       default:

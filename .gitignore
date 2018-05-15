@@ -79,3 +79,10 @@ Temporary Items
 *.orig
 *.rej
 *.bak
+
+# face_detection
+modules/face_detection/*.pyc
+modules/face_detection/*~
+modules/face_detection/node_modules/**/*
+
+package-lock.json
